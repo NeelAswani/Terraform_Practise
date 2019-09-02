@@ -1,12 +1,9 @@
 provider "aws" {
-  access_key = "AKIA4RIWID4SRXYAJT5O"
-  secret_key = "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"
+  access_key = "AKXXXXXXXXXXXXX"
+  secret_key = "wMfCXXXXXXXXXXXXXXXXX"
   region     = "ap-south-1"
 }
-resource "aws_s3_bucket" "example" {
-  bucket = "pranilmbucket"
-  acl    = "private"
-  versioning {
-    enabled = true
-  }
+resource "aws_instance" "example" {
+  ami           = "ami-0d2692b6acea72ee6"
+  instance_type = "t2.micro"
 }
